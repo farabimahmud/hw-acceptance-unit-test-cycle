@@ -10,12 +10,13 @@ class MoviesController < ApplicationController
     # will render app/views/movies/show.<extension> by default
   end
 
-  def movies_same_director 
-    @same_director_movies = Movie.movies_by_same_director(id: params[:id])
+  def movies_same_director     
     @movie = Movie.find(params[:id])
     if @movie.director.nil?
       redirect_to movies_path
       flash[:notice ] = "'#{@movie.title}' "+  "has no director info"
+    else 
+      @same_director_movies = Movie.movies_by_same_director(id: params[:id])
     end
   end
 
