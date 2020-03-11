@@ -45,9 +45,10 @@ Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
 
-When /^(?:|I )go to (.+)$/ do |page_name|
-  visit path_to(page_name)
-end
+# used for visiting page
+# When /^(?:|I )go to (.+)$/ do |page_name|
+#   visit path_to(page_name)
+# end
 
 When /^(?:|I )press "([^"]*)"$/ do |button|
   click_button(button)
@@ -76,11 +77,13 @@ end
 # TODO: Add support for checkbox, select or option
 # based on naming conventions.
 #
-When /^(?:|I )fill in the following:$/ do |fields|
-  fields.rows_hash.each do |name, value|
-    When %{I fill in "#{name}" with "#{value}"}
-  end
-end
+
+
+# When /^(?:|I )fill in the following:$/ do |fields|
+#   fields.rows_hash.each do |name, value|
+#     When %{I fill in "#{name}" with "#{value}"}
+#   end
+# end
 
 When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |value, field|
   select(value, :from => field)
