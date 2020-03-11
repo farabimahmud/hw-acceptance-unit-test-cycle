@@ -25,5 +25,3 @@ Then /I should see all the movies/ do
   end
 end
 
-
-
