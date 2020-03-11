@@ -4,6 +4,6 @@
 #   And   I should see "THX-1138"
 #   But   I should not see "Blade Runner"
 
-When /I follow "Find Movies With Same Director"/ do
-
-end
+# When /I follow "Find Movies With Same Director"/ do 
+#     # director = Movie.movies_by_same_director()
+# end
